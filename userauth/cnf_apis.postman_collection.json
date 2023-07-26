@@ -1,0 +1,619 @@
+{
+	"info": {
+		"_postman_id": "d3c56593-1341-41ec-b435-94de803dcf3b",
+		"name": "cnf_apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "demp_apis@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12121212",
+							"type": "text"
+						},
+						{
+							"key": "rest_id",
+							"value": "95",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://test_apis.clicknfeed.co.uk/api/auth/login",
+					"protocol": "https",
+					"host": [
+						"test_apis",
+						"clicknfeed",
+						"co",
+						"uk"
+					],
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "demp_apis@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12121212",
+									"type": "text"
+								},
+								{
+									"key": "rest_id",
+									"value": "95",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://test_apis.clicknfeed.co.uk/api/auth/login",
+							"protocol": "https",
+							"host": [
+								"test_apis",
+								"clicknfeed",
+								"co",
+								"uk"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Jul 2023 15:47:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "57"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=jnLwOMPuO05X2bacKvSJceOM%2BjvuCOcLv595LGWaifvOG4QS83sxTL7xFb2miZShLoTKZ63kCBfAshV8H1hkW4%2FsGNFVFuSOy%2BTmNO%2FruLD0Hvg%2B%2FBoXoxwmenFwB6e5%2FA%2BVcIu4xwnm3g5mBA%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e20bfd7686c3e0b-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdF9hcGlzLmNsaWNrbmZlZWQuY28udWsvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg1NzIwNzcsImV4cCI6MTY4ODU3NTY3NywibmJmIjoxNjg4NTcyMDc3LCJqdGkiOiJyQktoUEo0ZHBDWUZMTkYyIiwic3ViIjoiNDg3NyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.atfWrZ5WAi6i61qppQ-gSLcOCJPA65Oto3asBGZRQtY\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+				}
+			]
+		},
+		{
+			"name": "logged in user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdF9hcGlzLmNsaWNrbmZlZWQuY28udWsvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg1NzIwNzcsImV4cCI6MTY4ODU3NTY3NywibmJmIjoxNjg4NTcyMDc3LCJqdGkiOiJyQktoUEo0ZHBDWUZMTkYyIiwic3ViIjoiNDg3NyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.atfWrZ5WAi6i61qppQ-gSLcOCJPA65Oto3asBGZRQtY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://test_apis.clicknfeed.co.uk/api/auth/me",
+					"protocol": "https",
+					"host": [
+						"test_apis",
+						"clicknfeed",
+						"co",
+						"uk"
+					],
+					"path": [
+						"api",
+						"auth",
+						"me"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "logged in user example",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdF9hcGlzLmNsaWNrbmZlZWQuY28udWsvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg1NzIwNzcsImV4cCI6MTY4ODU3NTY3NywibmJmIjoxNjg4NTcyMDc3LCJqdGkiOiJyQktoUEo0ZHBDWUZMTkYyIiwic3ViIjoiNDg3NyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.atfWrZ5WAi6i61qppQ-gSLcOCJPA65Oto3asBGZRQtY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://test_apis.clicknfeed.co.uk/api/auth/me",
+							"protocol": "https",
+							"host": [
+								"test_apis",
+								"clicknfeed",
+								"co",
+								"uk"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Jul 2023 15:49:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=h05CE96skpWy2JcHbmXn09%2F2NtFBE2wI4K7iJmo%2FIPiPoXtDpr2PmTBB2gRLbqNTmuSshg6iuDPK2OPqX5%2FPy5dPoupE8ZsG8NiMVeSUBeZHyt94qoYydMSNYrHJesjPtns72%2Ftbffm3ewOHBQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e20c1bc4ad83e0b-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4877,\n    \"rest_id\": 95,\n    \"role_id\": null,\n    \"google_id\": null,\n    \"fb_id\": null,\n    \"name\": \"demp_apis\",\n    \"email\": \"demp_apis@gmail.com\",\n    \"avatar\": \"users/default.png\",\n    \"email_verified_at\": null,\n    \"api_token\": \"LHoAORtYHZOVllLGdxUBL6h205q6ssBE5nPPhX71Ypbjdb6z4veglsIYrgbnV9R10q30BE0kcojvTf9F\",\n    \"phone\": \"03435936793\",\n    \"phone_verify_code\": null,\n    \"verify_sent_at\": null,\n    \"phone_verify_at\": null,\n    \"phone_verify_is\": 1,\n    \"address\": \"MUST(Mirpur University of Science and Technology) New hostel Mirpur AJK\",\n    \"created_at\": \"2023-07-05T16:44:10.000000Z\",\n    \"updated_at\": \"2023-07-05T16:44:48.000000Z\",\n    \"active\": 1,\n    \"stripe_id\": null,\n    \"card_brand\": null,\n    \"card_last_four\": null,\n    \"trial_ends_at\": null,\n    \"verification_code\": null,\n    \"phone_verified_at\": null,\n    \"plan_id\": null,\n    \"plan_status\": \"\",\n    \"cancel_url\": \"\",\n    \"update_url\": \"\",\n    \"checkout_id\": \"\",\n    \"subscription_plan_id\": \"\",\n    \"stripe_account\": \"\",\n    \"birth_date\": \"\",\n    \"lat\": null,\n    \"lng\": null,\n    \"working\": 1,\n    \"onorder\": null,\n    \"numorders\": 0,\n    \"rejectedorders\": 0,\n    \"paypal_subscribtion_id\": null,\n    \"tax_percentage\": \"0.0000\",\n    \"extra_billing_information\": null,\n    \"loyality_points\": 0,\n    \"referral_id\": 0,\n    \"referral_balance\": 0,\n    \"first_purchase\": 0,\n    \"report_token\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "refresh token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdF9hcGlzLmNsaWNrbmZlZWQuY28udWsvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg1NzIwNzcsImV4cCI6MTY4ODU3NTY3NywibmJmIjoxNjg4NTcyMDc3LCJqdGkiOiJyQktoUEo0ZHBDWUZMTkYyIiwic3ViIjoiNDg3NyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.atfWrZ5WAi6i61qppQ-gSLcOCJPA65Oto3asBGZRQtY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://test_apis.clicknfeed.co.uk/api/auth/refresh",
+					"protocol": "https",
+					"host": [
+						"test_apis",
+						"clicknfeed",
+						"co",
+						"uk"
+					],
+					"path": [
+						"api",
+						"auth",
+						"refresh"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "refresh token response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdF9hcGlzLmNsaWNrbmZlZWQuY28udWsvYXBpL2F1dGgvbG9naW4iLCJpYXQiOjE2ODg1NzIwNzcsImV4cCI6MTY4ODU3NTY3NywibmJmIjoxNjg4NTcyMDc3LCJqdGkiOiJyQktoUEo0ZHBDWUZMTkYyIiwic3ViIjoiNDg3NyIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.atfWrZ5WAi6i61qppQ-gSLcOCJPA65Oto3asBGZRQtY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://test_apis.clicknfeed.co.uk/api/auth/refresh",
+							"protocol": "https",
+							"host": [
+								"test_apis",
+								"clicknfeed",
+								"co",
+								"uk"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Jul 2023 15:50:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "58"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=LKaXYUfap5GaF00%2Bd1S4X%2BId9FpMoxcdYHm87m%2BGFrmL%2Fr0lM3s079eSXPX5AGIM%2FLQLivxs00rA1K7RuLDOOsudjmodvIbo2x%2FL6S1em%2Bs63KT%2Fd7I1eapaN7EWH9%2BPAEebXb%2Fk3xGZ8xisjQ%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e20c40c5e963e0b-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdF9hcGlzLmNsaWNrbmZlZWQuY28udWsvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTY4ODU3MjA3NywiZXhwIjoxNjg4NTc1ODQ5LCJuYmYiOjE2ODg1NzIyNDksImp0aSI6IjlLUEhtTTE0VFUzeTBsQzYiLCJzdWIiOiI0ODc3IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.PQOS5n9pOSyfUNoo00yn_8KI9Ft3ieb6v62_iWfB2FA\",\n    \"token_type\": \"bearer\",\n    \"expires_in\": 3600\n}"
+				}
+			]
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdF9hcGlzLmNsaWNrbmZlZWQuY28udWsvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTY4ODU3MjA3NywiZXhwIjoxNjg4NTc1ODQ5LCJuYmYiOjE2ODg1NzIyNDksImp0aSI6IjlLUEhtTTE0VFUzeTBsQzYiLCJzdWIiOiI0ODc3IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.PQOS5n9pOSyfUNoo00yn_8KI9Ft3ieb6v62_iWfB2FA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://test_apis.clicknfeed.co.uk/api/auth/logout",
+					"protocol": "https",
+					"host": [
+						"test_apis",
+						"clicknfeed",
+						"co",
+						"uk"
+					],
+					"path": [
+						"api",
+						"auth",
+						"logout"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "logout response",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vdGVzdF9hcGlzLmNsaWNrbmZlZWQuY28udWsvYXBpL2F1dGgvcmVmcmVzaCIsImlhdCI6MTY4ODU3MjA3NywiZXhwIjoxNjg4NTc1ODQ5LCJuYmYiOjE2ODg1NzIyNDksImp0aSI6IjlLUEhtTTE0VFUzeTBsQzYiLCJzdWIiOiI0ODc3IiwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.PQOS5n9pOSyfUNoo00yn_8KI9Ft3ieb6v62_iWfB2FA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://test_apis.clicknfeed.co.uk/api/auth/logout",
+							"protocol": "https",
+							"host": [
+								"test_apis",
+								"clicknfeed",
+								"co",
+								"uk"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Jul 2023 15:52:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "60"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "59"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=OjhI4KuY8fYGJYsOV6hqRK27a%2FXIbFRv900Uh5mIiwwprvrxwCs%2FnMR4RrIo4oLaVg9vnoJn1C5O4iuNyjeX%2BQrKqg4uKvPA0h%2BgLFZ0H6Bg%2FTUoZlzmUmXTSI%2B49Kf9CDp8YTy8GMG5YbYASg%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e20c63bf92b3e0b-SIN"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+				}
+			]
+		}
+	]
+}
